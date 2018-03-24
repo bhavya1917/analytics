@@ -1,0 +1,18 @@
+sname=c('riddhi','nihali','bhavya','amber','shlok','sagar')
+course=c('biotech','ece','it','cs','mech','eee')
+grades=c('a','c','b','d','e','f')
+gender=c('Female','Female','Female','Male','Male','Male')
+marks=ceiling(runif(6,50,100))
+df=data.frame(sname,course,grades,gender,marks)
+df
+str(df)
+df=fix(df)
+View(df)
+df$sname=as.character(df$sname)
+str(df)
+df$course=factor(df$course)
+str(df)
+unique(df$grades)
+df$grades=factor(df$grades,ordered = T,levels = c('d','b','a','c','f','e'))
+str(df$grades)
+df$grades
